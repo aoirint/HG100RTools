@@ -2,7 +2,7 @@ import hashlib
 import json
 from urllib.parse import urljoin
 import requests
-from typing import Dict, Any
+from typing import List, Dict, Any
 
 from .config import Config, load_config
 
@@ -176,7 +176,7 @@ def get_wan_ipv6(
   api_url: str,
   token: str,
   timeout: float = 3.0,
-) -> str:
+) -> List[str]:
   payload = {
     'method': 'QuickSetupInfo',
     'id': 90,
